@@ -7,7 +7,7 @@ const markupGallery = createGalleryMarkup(galleryItems);
 
 container.insertAdjacentHTML("beforeend", markupGallery);
 
-function createGalleryMarkup (gallery) {
+function createGalleryMarkup(gallery) {
    return gallery
     .map(({preview, original, description}) => { 
       return `<a class="gallery__item" href="${original}">

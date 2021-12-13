@@ -48,11 +48,18 @@ window.removeEventListener('keydown', onEscKeyPress);
   instance.close()
 };
 
-function onEscKeyPress(e) {
-    const ESC_KEY_CODE = 'Escape';
-    const isEscKey = e.code === ESC_KEY_CODE;
+// function onEscKeyPress(e) {
+//     const ESC_KEY_CODE = 'Escape';
+//     const isEscKey = e.code === ESC_KEY_CODE;
 
-    if (isEscKey) {
-        onCloseModal();
-    }
-};  
+//     if (isEscKey) {
+//         onCloseModal();
+//     }
+// };  
+
+document.addEventListener('keydown', function(e){
+	if(e.key === "Escape"){
+		refs.modal.src = '';
+  instance.close()
+	}
+});
