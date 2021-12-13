@@ -1,6 +1,6 @@
 'use strict'
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
+
 const instance = basicLightbox.create(
 `<img src="" />`
  );
@@ -10,8 +10,8 @@ const refs = {
     modal: instance.element().querySelector('img'),
 };
 
-const galleryMarkup = createGalleryMarkup();
-refs.gallery.insertAdjacentHTML('beforeend', galleryMarkup);
+const markup = createGalleryMarkup();
+refs.gallery.insertAdjacentHTML('beforeend', markup);
 
 function createGalleryMarkup() {
   return galleryItems
